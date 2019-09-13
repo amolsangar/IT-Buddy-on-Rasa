@@ -1,0 +1,18 @@
+[
+  {
+    "text": "{",
+    "intent": "UserDetailsJSON",
+    "intent_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "c u",
+    "intent": "greetings.bye",
+    "intent_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  }
+]

@@ -1,0 +1,75 @@
+DONE:
+
+fetch and store user details in rasa slots  --done
+where to create incident - backend or frontend?   --done at backend
+create tracker rest api at backend - to generate tracker for AID   --done
+restart conversation when the user gets stuck  --done  append action_restart at the end of the story
+table schema discussion    --done
+view ticket status   --done
+email validation at FE - dont let user change email id   --just to be tested   --done
+how to create ticket?   --done
+
+TO-DO: 
+
+1)
+Storing conversations in DB  --solution using rest call
+http://localhost:5005/conversations/A94799270/tracker?include_events=ALL
+http://localhost:5005/conversations/A94799270/tracker?include_events=AFTER_RESTART
+store per conversation
+
+2)
+create incident from python action --testing
+
+3)
+maintain session at frontend so that conversations can be killed after sometime
+
+5)
+create ticket for known intents auto
+only generate ticket whose intent the bot knows?   YES
+
+6)
+link downloadable or not
+
+9)
+application access key
+
+10)
+get userName from frontend of solarwinds - ask salim about integration
+
+11)
+after restart set slot problem
+
+
+NOT-TO-DO:
+install rasa-x to provide chat conversation window or find alternative
+conversation unique?   --discard
+conversation clear
+Do u need more assitance?
+
+enhance action_db_operation i.e. handle intent name there  --done
+set intent name at form level  --done
+handle request type at form level  --done
+handle it service request response  --done
+enlarge chat window  --done
+
+solving database insertion bug
+add all use cases
+*application access key
+
+
+
+
+
+
+  if(tracker.active_form.get('trigger_message')):
+            subject = tracker.active_form.get('trigger_message')['text'] +str(": ") + str(acc_type);
+        else:
+            subject = tracker.latest_message.get('text');
+
+        intent = str(tracker.latest_message['intent'].get('name'))
+
+
+ SlotSet("subject",subject),
+        SlotSet("prob_type", problemID),
+        SlotSet("intent_name", intent)
+
